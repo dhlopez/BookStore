@@ -1,0 +1,17 @@
+﻿@page
+@model BookStore.Pages.IndexModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+@{
+    foreach (var book in Model.Books)
+    {
+        <p>@book.Id</p>
+        <p>@book.Name</p>
+        <p>@book.Price</p>
+        <a asp-page="./Edit" asp-route-id="@book.Id">Edit</a>
+    }
+}

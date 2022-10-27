@@ -1,0 +1,12 @@
+﻿@page
+@model BookStore.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<p>@Model.book.Id</p>
+<p>@Model.book.Name</p>
+<p>@Model.book.Price</p>
+
+<a asp-page="./Index">Back to List</a>
